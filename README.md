@@ -6,6 +6,7 @@ Creating a multi AZ custom vpc (isolated network) which has both public and priv
 
 - [Introduction](#Introdiction)
 - [Quick Start](#quick-start)
+- [Notes](#notes)
 
 ## Introduction
 
@@ -156,7 +157,7 @@ terraform destroy -auto-approve
 
 ## Notes
 
-1. What is the difference between custom and default vpc ?
+#### What is the difference between custom and default vpc ?
 
 > Main difference is the default vpc works out of the box by providing access to most things which is suitable for development. Whereas custom VPC is suitable for granular access control by customizing the types of request that can access resources within the network (restrict by ip, request, network type etc)
 
@@ -172,7 +173,7 @@ terraform destroy -auto-approve
 - You need to create your own netowrk resources (allocate IP ranges, create subnets and provision gateways and networking  etc)
 - You need to handle security (who and/or what can access what)
 
-2. Network ACL vs Security Groups
+#### Network ACL vs Security Groups
 
 
 **Network ACLs:**
