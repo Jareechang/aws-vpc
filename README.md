@@ -43,9 +43,16 @@ In addition, support a public bastion host which allows for indirect and secure 
 **Setting up resources:**
 
 
-1. Add AWS secret and key to your environment
+1. Add AWS secret and key to your environment (or use template below and fill in envs)
 
-```
+```sh
+
+# setup-env.sh
+export AWS_ACCESS_KEY_ID=<xxxx>
+export AWS_SECRET_ACCESS_KEY=<xxxx>
+export AWS_DEFAULT_REGION=us-east-1
+
+. ./setup-env.sh
 
 ```
 
@@ -139,6 +146,15 @@ ssh ec2-user@10.0.11.186
 # It should be stuck
 ping 1.1.1.1
 ```
+
+#### Finishing (**Important**)
+
+1. Destroy resources (to no incur charges) 
+
+```sh
+terraform destroy -auto-approve
+```
+
 ## Notes
 
 1. What is the difference between custom and default vpc ?
