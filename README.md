@@ -22,7 +22,6 @@ In addition, support a public bastion host which allows for indirect and secure 
 
 **Core Concepts:**
 
--  
 - Public / private subnets 
 - Allow internet access (IGW)
 - Bastion host and jumpbox
@@ -172,3 +171,29 @@ terraform destroy -auto-approve
 
 - You need to create your own netowrk resources (allocate IP ranges, create subnets and provision gateways and networking  etc)
 - You need to handle security (who and/or what can access what)
+
+2. Network ACL vs Security Groups
+
+
+**Network ACLs:**
+- Network ACLs are stateless (meaning change applied to in-going traffic does not apply to out-going)
+- Network ACLs supports "allow" and "deny" rules
+- Network ACLs rules are evaluated by order
+- Can explicitly deny a certain IP address (ie Block 123.222.222.222 with EC2)
+- Automatically applies to all instances in subnets that it is associated in
+
+**Security Groups:**
+
+- Security Groups are stateful (meaning changes applied to in-going traffic applies to out-going)
+- Security Groups support only "allow"
+- You cannot explicitly deny a certain IP address (ie Block 123.222.222.222 with EC2)
+- No order (all of them do apply)
+- Operates at the instance level
+- Applies only if instance is assigned the specific security group
+
+
+> In summary, prefer network ACL over security groups for overall defense for subnets within a VPC. However, do leverage security groups for granular access control of the launched ec2 instance. 
+
+**Resources:**
+- [AWS Security Groups vs network ACLs](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html#VPC_Security_Comparison)
+- [Security Group Basics](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#VPCSecurityGroups)
