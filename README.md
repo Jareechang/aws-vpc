@@ -192,7 +192,8 @@ terraform destroy -auto-approve
 - Applies only if instance is assigned the specific security group
 
 
-> In summary, prefer network ACL over security groups for overall defense for subnets within a VPC. However, do leverage security groups for granular access control of the launched ec2 instance. 
+> In summary, prefer network ACL over security groups for overall defense for subnets within a VPC. However, do leverage security groups for granular access control of the launched ec2 instance.
+> As a tip, in addition to network ACLs and security groups, use AWS IAM to further management and control the access between the resources within the network, see [IAM - Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html).
 
 **Resources:**
 - [AWS Security Groups vs network ACLs](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html#VPC_Security_Comparison)
