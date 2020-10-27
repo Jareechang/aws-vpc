@@ -87,7 +87,7 @@ Done.
 chmod 400 ssh-key.pem
 ```
 
-3. copy the `public ip` of instnace and ssh into it   
+3. copy the `public ip` of instance and ssh into it   
 
 ```sh
 ssh -i ./ssh-key.pem ec2-user@<bastion_instance_ip>
@@ -149,7 +149,7 @@ ping 1.1.1.1
 
 #### Finishing (**Important**)
 
-1. Destroy resources (to no incur charges) 
+1. Destroy resources (to not incur charges) 
 
 ```sh
 terraform destroy -auto-approve
@@ -194,7 +194,7 @@ terraform destroy -auto-approve
 
 
 > In summary, prefer network ACL over security groups for overall defense for subnets within a VPC. However, do leverage security groups for granular access control of the launched ec2 instance.
-> As a tip, in addition to network ACLs and security groups, use AWS IAM to further management and control the access between the resources within the network, see [IAM - Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html).
+> As a tip, in addition to network ACLs and security groups, use AWS IAM to further manage and control the access between the resources within the network, see [IAM - Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html).
 
 **Resources:**
 - [AWS Security Groups vs network ACLs](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html#VPC_Security_Comparison)
