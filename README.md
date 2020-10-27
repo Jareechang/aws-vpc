@@ -133,11 +133,11 @@ ssh-add -L
 ssh -A ec2-user@<bastion_instance_ip>
 ```
 
-4. Look up in console a the private, and ssh into the instance
+4. ssh into the private instance within the vpc
 
 ```sh
 # For example
-ssh ec2-user@10.0.11.186
+ssh ec2-user@<private_instance_ip>
 ```
 
 5. Verify no internet access

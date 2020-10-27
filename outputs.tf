@@ -7,5 +7,5 @@ output "bastion_instance_ip" {
 }
 
 output "private_instance_ip" {
-    value = aws_instance.dev.public_ip
+    value = aws_instance.dev.private_ip
 }
