@@ -5,5 +5,4 @@ terraform.tfstate.backup
 *.tfstate
 *.swp
 .terraform
-node_modules
-ddb-inserts.json
+*.pem
