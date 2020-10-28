@@ -6,7 +6,7 @@ Creating a multi AZ custom vpc (isolated network) which has both public and priv
 
 ## Table Of Contents:
 
-- [Introduction](#Introdiction)
+- [Introduction](#Introduction)
 - [Quick Start](#quick-start)
 - [Notes](#notes)
 
