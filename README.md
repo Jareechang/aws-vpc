@@ -2,6 +2,8 @@
 
 Creating a multi AZ custom vpc (isolated network) which has both public and private access (via subnets).
 
+<img src="./images/aws-vpc-ec2.svg">
+
 ## Table Of Contents:
 
 - [Introduction](#Introdiction)
